@@ -6,6 +6,7 @@ const CharacterCard = ({char}) => {
     return (
         <Grid.Column>
             <Image
+                loading='lazy'
                 centered
                 circular
                 size="small"
