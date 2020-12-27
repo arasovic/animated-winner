@@ -21,6 +21,7 @@ const EpisodeDetailsPage = (props) => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
+        window.scroll(0, 0)
         setLoading(true)
         const episodeId = findLastFromUrl(props?.location?.pathname)
         getEpisodes(episodeId).then(response1 => {
@@ -51,8 +52,8 @@ const EpisodeDetailsPage = (props) => {
 
     return (
         <>
-            <Segment vertical>
-                <LoaderComp loading={loading}/>
+            <LoaderComp loading={loading}/>
+            {!loading && <Segment vertical>
                 <Container>
                     <Header size={"large"}>{episode?.episode} - {episode?.name}
                         <Header.Subheader>
@@ -83,7 +84,7 @@ const EpisodeDetailsPage = (props) => {
                                 Characters: {characters?.length} </> : <>Results: {characters?.length}</>}
                         </Header></Grid.Row>
                 </Grid>
-            </Segment>
+            </Segment>}
         </>
     );
 };

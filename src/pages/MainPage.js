@@ -14,6 +14,7 @@ function MainPage() {
 
 
     useEffect(() => {
+        window.scroll(0, 0)
         setLoading(true)
         getEpisodesForPage(activePage).then(response => {
             setEpisodes(response?.data?.results)
@@ -30,7 +31,7 @@ function MainPage() {
     return (
         <div>
             <LoaderComp loading={loading}/>
-            <Grid>
+            {!loading && <Grid>
                 <Grid.Column>
                     <Grid.Row>
                         <Header size={"large"}>Rick And Morty Episodes</Header>
@@ -68,7 +69,7 @@ function MainPage() {
                         }
                     </Grid.Row>
                 </Grid.Column>
-            </Grid>
+            </Grid>}
         </div>
     );
 }

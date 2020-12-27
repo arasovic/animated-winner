@@ -3,6 +3,7 @@ import {Route, Switch} from "react-router-dom";
 import {Container} from "semantic-ui-react";
 import MainPage from "../../pages/MainPage";
 import EpisodeDetailsPage from "../../pages/EpisodeDetailsPage";
+import CharacterDetailsPage from "../../pages/CharacterDetailsPage";
 
 
 function PageRouter() {
@@ -11,7 +12,7 @@ function PageRouter() {
             <Switch>
                 <Route exact path="/" component={MainPage}/>
                 <Route path="/episode-details/:id" component={EpisodeDetailsPage}/>
-                <Route path="/character-details/:id"/>
+                <Route path="/character-details/:id" component={CharacterDetailsPage}/>
             </Switch>
         </Container>
     );

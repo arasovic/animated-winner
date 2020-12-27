@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Grid, Header, Image} from "semantic-ui-react";
+import {Link} from "react-router-dom";
 
 const CharacterCard = ({char}) => {
     return (
@@ -17,7 +18,7 @@ const CharacterCard = ({char}) => {
                 </Header.Subheader>
             </Header>
 
-            <Button basic>View details &raquo;</Button>
+            <Button as={Link} basic to={"/character-details/" + char.id}>View details &raquo;</Button>
         </Grid.Column>
     );
 }

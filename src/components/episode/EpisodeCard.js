@@ -1,6 +1,5 @@
 import React from 'react';
 import {Card, Label} from "semantic-ui-react";
-import moment from "moment";
 import {Link} from "react-router-dom";
 
 function EpisodeCard(props) {
@@ -11,7 +10,7 @@ function EpisodeCard(props) {
                 <Card.Header className={'textOverflow'}>{episode.name}</Card.Header>
                 <Card.Meta>{episode.episode}</Card.Meta>
                 <Card.Description style={{marginBottom: 5}}>
-                    {moment(episode.created).format("LLLL")}
+                    {episode.air_date}
                 </Card.Description>
                 <Label color='blue' ribbon={"right"}>
                     Character Count: {episode.characters?.length}
