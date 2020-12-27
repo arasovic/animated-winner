@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 function NavBar() {
     return (
         <div>
-            <Menu fixed='top'>
+            <Menu fixed='top' stackable>
                 <Container>
                     <Menu.Item as={Link} header to={"/"}>
                         <Image size='mini' src={Icon} style={{marginRight: '1.5em'}}/>

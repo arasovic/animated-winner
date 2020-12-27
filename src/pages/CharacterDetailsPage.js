@@ -44,7 +44,7 @@ const CharacterDetailsPage = ({match}) => {
     return (
         <>
             <LoaderComp loading={loading}/>
-            {!loading && <Grid container stackable>
+            {!loading && <Grid container stackable doubling>
                 <Grid.Row>
                     <Grid.Column width={4}>
                         <Image circular src={"/api/character/avatar/" + character?.id + ".jpeg"}/>

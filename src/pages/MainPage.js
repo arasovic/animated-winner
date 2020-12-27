@@ -45,7 +45,7 @@ function MainPage() {
                     </Grid.Row>
                     <Grid.Row>
                         {episodes.length > 0 &&
-                        <Menu basic={"true"} style={{marginTop: 22}} fixed={'bottom'}>
+                        <Menu stackable basic={"true"} style={{marginTop: 22}}>
                             <Menu.Item>
                                 Page Count: {episodes?.length}
                             </Menu.Item>
@@ -54,7 +54,9 @@ function MainPage() {
                             </Menu.Item>
                             <Menu.Item position='right'>
                                 <Pagination
-                                    floated='right'
+                                    stackable
+                                    pointing
+                                    secondary
                                     onPageChange={handlePaginationChange}
                                     activePage={activePage}
                                     boundaryRange={0}

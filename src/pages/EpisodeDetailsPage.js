@@ -60,7 +60,7 @@ const EpisodeDetailsPage = (props) => {
                             {episode?.air_date}
                         </Header.Subheader>
                     </Header>
-                    <Menu basic={"true"}>
+                    <Menu basic={"true"} stackable>
                         <Menu.Item>
                             <Header>Characters</Header>
                         </Menu.Item>
