@@ -10,7 +10,7 @@ const CharacterCard = ({char}) => {
                 centered
                 circular
                 size="small"
-                src={"/api/character/avatar/" + char?.id + ".jpeg"}
+                src={"https://rickandmortyapi.com/api/character/avatar/" + char?.id + ".jpeg"}
             />
             <Header as="h3">
                 {char.name}
@@ -19,7 +19,7 @@ const CharacterCard = ({char}) => {
                 </Header.Subheader>
             </Header>
 
-            <Button as={Link} basic to={"/character-details/" + char.id}>View details &raquo;</Button>
+            <Button as={Link} basic to={"/animated-winner/character-details/" + char.id}>View details &raquo;</Button>
         </Grid.Column>
     );
 }

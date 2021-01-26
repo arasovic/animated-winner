@@ -8,7 +8,7 @@ function NavBar() {
         <div>
             <Menu fixed='top' stackable>
                 <Container>
-                    <Menu.Item as={Link} header to={"/"}>
+                    <Menu.Item as={Link} header to={"/animated-winner/"}>
                         <Image size='mini' src={Icon} style={{marginRight: '1.5em'}}/>
                         Rick And Morty
                     </Menu.Item>

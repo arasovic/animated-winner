@@ -10,9 +10,9 @@ function PageRouter() {
     return (
         <Container style={{marginTop: 88}}>
             <Switch>
-                <Route exact path="/" component={MainPage}/>
-                <Route path="/episode-details/:id" component={EpisodeDetailsPage}/>
-                <Route path="/character-details/:id" component={CharacterDetailsPage}/>
+                <Route exact path="/animated-winner/" component={MainPage}/>
+                <Route path="/animated-winner/episode-details/:id" component={EpisodeDetailsPage}/>
+                <Route path="/animated-winner/character-details/:id" component={CharacterDetailsPage}/>
             </Switch>
         </Container>
     );

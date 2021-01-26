@@ -47,7 +47,8 @@ const CharacterDetailsPage = ({match}) => {
             {!loading && <Grid container stackable doubling>
                 <Grid.Row>
                     <Grid.Column width={4}>
-                        <Image loading='lazy' circular src={"/api/character/avatar/" + character?.id + ".jpeg"}/>
+                        <Image loading='lazy' circular
+                               src={"https://rickandmortyapi.com/api/character/avatar/" + character?.id + ".jpeg"}/>
                     </Grid.Column>
                     <Grid.Column width={8}>
                         <Header size="huge">
